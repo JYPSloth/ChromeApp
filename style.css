@@ -1,0 +1,319 @@
+body{
+  font-family: 'Brush Script MT', monospace;
+}
+
+.js-clock{
+  text-align: center;
+  animation: change 5s infinite;
+  text-shadow: mediumslateblue 1px 2px 2px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.js-clock .js-title{
+  font-size: 80px;
+}
+
+.js-clock .js-date{
+  font-size: x-large;
+}
+
+.js-weather{
+  text-align: right;
+  font-size: x-large;
+  font-style: italic;
+  font-weight: bold;
+  color: rgba(240, 248, 255,0.5);
+  text-shadow: mediumslateblue 1px 1px 4px;
+}
+
+.form, .greeting{
+  display: none;
+}
+
+.greeting {
+  font-size: xx-large;
+  text-align: center;
+  color: aliceblue;
+  text-shadow: midnightblue 2px 2px 2px;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px lavender;
+}
+
+input{
+  text-align: right;
+  width: 320px;
+  height: 30px;
+  background-color: transparent;
+  font-size: large;
+  font-weight: bold;
+  color: lavender;
+  text-shadow: midnightblue 2px 2px 2px;
+  font-family: 'Brush Script MT', monospace;
+  border: none;
+}
+
+input::placeholder{
+  color:lavender;
+  font-family: 'Brush Script MT', monospace;
+  font-size: large;
+  text-align: center;
+  text-shadow: midnightblue 2px 2px 2px;
+  transition: all 0.5s;
+  transition-timing-function: ease;
+}
+
+input:focus{
+  outline: none;
+}
+
+input:hover::placeholder{
+  font-size: x-large;
+  transition: all 0.5s;
+  transition-timing-function: ease;
+}
+
+.form input{
+  width: 100%;
+  height: 100px;
+  margin-top: 30%;
+  text-align: center;
+}
+
+.form input::placeholder{
+  font-size: xx-large;
+  transition: all 0.5s;
+  transition-timing-function: ease; 
+}
+
+.form input:hover::placeholder{
+  font-size: 80px;
+  transition: all 0.5s;
+  transition-timing-function: ease;
+}
+.js-toDoForm{
+  padding-top: 10px;
+}
+
+.showing{
+  display: block;
+}
+
+@keyframes change{
+  0%{
+    color: mistyrose;
+  }
+  25%{
+    color: moccasin;
+  }
+  50%{
+    color: lightblue;
+  }
+  75%{
+    color: lavender;
+  }
+  100%{
+    color: mistyrose;
+  }
+}
+
+.bgImage{
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  max-width: 100%;
+  max-height: 100%;
+  bottom: 0;
+  margin: auto;
+  overflow: auto;
+  position: fixed;
+  right: 0;
+}
+
+#grid{
+  display: grid;
+  grid-template-columns: 1fr 10px 1fr;
+}
+
+#pending, #finished{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, rgba(230,230,250,0.3), rgba(230,230,250,0));
+  border-radius: 10px;
+}
+
+h2{
+  width: 70%;
+  text-align: center;
+  border-radius: 10px;
+  color: rgba(240, 248, 255, 0.8);
+  text-shadow: 1px 2px 2px rgba(25, 25, 112, .75);
+}
+
+ol{
+  padding-right: 100px;
+  color: midnightblue;
+  text-shadow: 0 0 4px lavenderblush,  0 0 4px lavenderblush,  0 0 4px lavenderblush;
+
+}
+
+ol span{
+  font-family: 'Brush Script MT', monospace;
+  font-size: large;  
+  padding-right: 10px;
+}
+
+ol button{
+  background-color: transparent;
+  border:none;
+  font-weight: bold;
+  text-shadow: 0 0 4px lavenderblush,  0 0 4px lavenderblush,  0 0 4px lavenderblush;
+  transition: all 0.5s;
+  transition-timing-function: ease;
+}
+
+ol button:active{
+  outline: none;
+}
+
+ol button:hover{
+  font-size: x-large;
+  transition: all 0.5s;
+  transition-timing-function: ease;
+}
+
+
+.paintApp{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+  background: linear-gradient(to bottom, rgba(230,230,250,0.3), rgba(230,230,250,0));
+  border-radius: 10px;
+}
+
+.canvas {
+  width: 400px;
+  height: 400px;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.controls {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.controls .controlsBtns {
+  margin-bottom: 30px;
+  font-family: 'Brush Script MT', monospace;
+}
+
+.controlsBtns button{
+  all: unset;
+  color: midnightblue;
+  padding: 10px;
+  background-color: transparent;
+  border:none;
+  font-weight: bold;
+  text-shadow: 0 0 4px lavenderblush,  0 0 4px lavenderblush,  0 0 4px lavenderblush;
+  text-transform: uppercase;
+  font-weight: 800;
+  font-size: 20px;
+  transition: all 0.5s;
+  transition-timing-function: ease;
+}
+
+.controlsBtns button:active{
+  outline: none;
+  transform: scale(0.98);
+}
+
+.controlsBtns button:hover{
+  font-size: 30px;
+  transition: all 0.5s;
+  transition-timing-function: ease;
+}
+
+
+.controls .controlsColors {
+  display: flex;
+}
+
+.controlsColors .controlsColor {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.5s;
+  transition-timing-function: ease;
+}
+
+.controlsColors .controlsColor:hover{
+  width: 70px;
+  height: 70px;
+  border-radius: 35px;
+  transition: all 0.5s;
+  transition-timing-function: ease;
+}
+
+.controls .controlsRange{
+  margin-bottom: 30px;
+}
+
+.fold{
+  font-family: inherit;
+  color: midnightblue;
+  padding: 10px;
+  background-color: transparent;
+  border:none;
+  font-weight: bold;
+  text-shadow: 0 0 4px lavenderblush,  0 0 4px lavenderblush,  0 0 4px lavenderblush;
+  transition: all 0.5s;
+  transition-timing-function: ease;
+}
+
+.fold:active{
+  outline: none;
+}
+
+.fold:hover{
+  font-size: x-large;
+  transition: all 0.5s;
+  transition-timing-function: ease;
+}
+
+.unfold{
+  font-family: inherit;
+  text-align: center;
+  color: midnightblue;
+  padding: 10px;
+  background-color: transparent;
+  border:none;
+  font-weight: bold;
+  text-shadow: 0 0 4px lavenderblush,  0 0 4px lavenderblush,  0 0 4px lavenderblush;
+  transition: all 0.5s;
+  transition-timing-function: ease;
+}
+
+.unfold:active{
+  outline: none;
+}
+
+.unfold:hover{
+  font-size: x-large;
+  transition: all 0.5s;
+  transition-timing-function: ease;
+}
+
+#blocking{
+  display: none;
+}
