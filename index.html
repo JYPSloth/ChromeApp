@@ -30,9 +30,12 @@
           <ol class="js-finished"></ol>
         </div>
       </div>
-      <button class="unfold">▲Unfold the Paint App▲</button>
+      <div class="foldBtns">
+        <button class="unfold js-unfoldApp">▲Unfold the Paint App▲</button>
+        <button class="unfold js-unfoldCal">▲Unfold the Calculator▲</button>
+      </div>
       <div class="paintApp" id="blocking">
-        <button class="fold">▼Fold the Paint App▼</button>
+        <button class="fold js-foldApp">▼Fold the Paint App▼</button>
         <canvas id="jsCanvas" class="canvas"></canvas>
         <div class="controls">
           <div class="controlsRange">
@@ -55,7 +58,42 @@
           </div>
         </div>
       </div>
+      <div class="calculator" id="blocking">
+        <button class="fold js-foldCal">▼Fold the Calculator▼</button>
+        <div id="calculator">
+          <div id="name">Pinkulator</div>
+          <div id="input-wrap">
+            <div id="input">0</div>
+          </div>
+          <div id="button-wrap">
+            <button class="cal" id="all-clear">AC</button>
+            <button class="cal" id="clear">C</button>
+            <button class="cal" id="sign">±</button>
+            <button class="amt plus" value="+">+</button>
+    
+            <button class="number">7</button>
+            <button class="number">8</button>
+            <button class="number">9</button>
+            <button class="amt minus" value="-">–</button>
+    
+            <button class="number">4</button>
+            <button class="number">5</button>
+            <button class="number">6</button>
+            <button class="amt times" value="*">×</button>
+    
+            <button class="number">1</button>
+            <button class="number">2</button>
+            <button class="number">3</button>
+            <button class="amt divides" value="/">÷</button>
+    
+            <button class="number num-0">0</button>
+            <button class="cal" id="dot">.</button>
+            <button id="result">=</button>
+          </div>
+        </div>    
+      </div>
     </div>
+    <script src="cal.js"></script>
     <script src="paint.js"></script>
     <script src="clock.js"></script>
     <script src="greeting.js"></script>

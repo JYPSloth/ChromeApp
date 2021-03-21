@@ -5,15 +5,33 @@ const range = document.getElementById("jsRange");
 const mode = document.getElementById("jsMode");
 const saveBtn = document.getElementById("jsSave");
 
-const defaultColor = "#2c2c2c";
-canvas.width = document.getElementsByClassName("canvas")[0].offsetWidth;
-canvas.height = document.getElementsByClassName("canvas")[0].offsetHeight;
+const fold = document.querySelector(".js-foldApp"),
+  unfold = document.querySelector(".js-unfoldApp"),
+  paintApp = document.querySelector(".paintApp");
 
-ctx.fillStyle = "white";
-ctx.fillRect(0, 0, canvas.width, canvas.height);
-ctx.strokeStyle = defaultColor;
-ctx.fillStyle = defaultColor;
-ctx.lineWidth = 2.5;
+function foldApp(){
+  paintApp.id = "blocking";
+  unfold.id = "";
+}
+
+function unfoldApp(){
+  paintApp.id = "";
+  unfold.id = "blocking";
+  canvasSize();
+}
+
+function canvasSize(){
+  const defaultColor = "#2c2c2c";
+  canvas.width = document.getElementsByClassName("canvas")[0].offsetWidth;
+  canvas.height = document.getElementsByClassName("canvas")[0].offsetHeight;
+  ctx.fillStyle = "white";
+  ctx.fillRect(0, 0, canvas.width, canvas.height);
+  ctx.strokeStyle = defaultColor;
+  ctx.fillStyle = defaultColor;
+  ctx.lineWidth = 2.5;
+}
+
+
 
 let painting = false;
 let filling = false;
@@ -102,4 +120,11 @@ if (mode){
 
 if (saveBtn){
   saveBtn.addEventListener("click", handleSaveClick);
+}
+
+if (fold){
+  fold.addEventListener("click",foldApp);
+}
+if (unfold){
+  unfold.addEventListener("click", unfoldApp);
 }

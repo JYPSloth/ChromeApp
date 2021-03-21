@@ -243,7 +243,6 @@ ol button:hover{
   transition-timing-function: ease;
 }
 
-
 .controls .controlsColors {
   display: flex;
 }
@@ -267,6 +266,11 @@ ol button:hover{
 
 .controls .controlsRange{
   margin-bottom: 30px;
+}
+
+.foldBtns{
+  display: flex;
+  justify-content: center;
 }
 
 .fold{
@@ -312,6 +316,102 @@ ol button:hover{
   font-size: x-large;
   transition: all 0.5s;
   transition-timing-function: ease;
+}
+
+.calculator{
+  font-family: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: lightpink;
+  flex-direction: column;
+  margin-top: 50px;
+  background: linear-gradient(to bottom, rgba(230,230,250,0.3), rgba(230,230,250,0));
+  border-radius: 10px;
+}
+
+#calculator {
+  width: 60%;
+  max-width: 430px;
+  padding: 25px;
+  border-radius: 25px;
+  background: linear-gradient(to bottom right, salmon, indianred);
+}
+
+#name {
+  padding-bottom: 4px;
+  color: maroon;
+}
+
+#input-wrap {
+  margin-left: -2px;
+  margin-bottom: 5px;
+  border-radius: 20px;
+  background: mistyrose;
+  border: inset mistyrose;
+}
+
+#input {
+  text-align: right;
+  padding-right: 10px;
+  height: 5rem;
+  line-height: 5rem;
+  font-size: 2rem;
+  font-weight: 900;
+  color: firebrick;
+}
+
+#button-wrap {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+#button-wrap > button {
+  width: 24%;
+  text-align: center;
+  line-height: 5rem;
+  margin: 2px 0;
+  color: cornsilk;
+  font-size: 200%;
+  font-family: "Courier New";
+  border-radius: 4px;
+  cursor: pointer;
+  user-select: none;
+  outline: 0;
+  transition: 0.3s;
+  background: lightcoral;
+  border: outset lightcoral;
+}
+
+#button-wrap > button.num-0 {
+  width: calc(50% - 4px);
+}
+
+#button-wrap > button.number {
+  background: antiquewhite;
+  border: outset antiquewhite;
+  color: firebrick;
+}
+
+#button-wrap > button.amt,
+.cal,
+#result {
+  font-weight: bold;
+}
+#button-wrap > button.cal {
+  background: lightsalmon;
+  border: outset lightsalmon;
+}
+
+#button-wrap > button:hover {
+  border: inset lightcoral;
+}
+
+#button-wrap > button:active {
+  background: rosybrown;
+  border: inset rosybrown;
 }
 
 #blocking{
